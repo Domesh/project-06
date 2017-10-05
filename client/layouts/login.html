@@ -1,0 +1,58 @@
+
+<template name="login">
+
+<main>
+  {{> Template.dynamic template=main2}}
+</main>
+<div>
+  {{#if currentUser}}
+  <h5>Welcome User </h5>
+
+  {{> loginButtons}}
+  {{> city}}
+  {{> addcity}}
+  {{> product}}
+  {{> add}}
+
+
+  {{else}}
+  <h5>Welcome User Please Login Here</h5>
+  {{> loginButtons}}
+  {{> login1}}
+  {{> userReg}}
+  {{/if}}
+
+
+</div>
+</template>
+
+
+<template name="userReg">
+    <h2>Register</h2>
+    <form>
+        <input type="email" id="email" placeholder="Please Enter Your Mail ID" required>
+        <input type="password" id="password" placeholder="Please Enter Password" required>
+        <input type="submit" value="Register">
+    </form>
+
+</template>
+
+
+<template name="login1">
+    <h2>Login</h2>
+    <form>
+        <input type="text" id="email" placeholder="Please Enter Your Mail ID" required>
+        <input type="password" id="password" placeholder="Please Enter Password" required>
+        <input type="submit" value="Login">
+    </form>
+</template>
+
+
+<!--
+<template name="dashboard">
+  <p>You are logged in </p>
+<p><a href="#" class="logout">Logout</a></p>
+</template>
+
+
+-->
